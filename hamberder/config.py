@@ -11,3 +11,16 @@ def keep_string(string):
     return any([
         re.search(r"(republican|democrat)s*", string, re.IGNORECASE) is not None,
     ])
+
+
+# determines if replacement on a tweet would be in bad taste
+def bad_tweet(string):
+    """
+    determines if replacement on a tweet would be in bad taste
+    :param string:
+    :return: a boolean. True if tweet should not be botted
+    """
+    return any([
+        # leaving out racist stuff
+        re.search(r"(african(-| )american|mexican|hispanic)", string, re.IGNORECASE) is not None
+    ])
