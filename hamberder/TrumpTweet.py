@@ -1,4 +1,5 @@
 import tweepy
+from .replacement_rules import replacement_rules
 
 
 class TrumpTweet:
