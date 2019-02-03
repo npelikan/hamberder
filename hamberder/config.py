@@ -1,5 +1,7 @@
 import re
 
+TRUMP_TWITTER_ID = "25073877"
+
 
 # defines hard non-replacement string rules
 def keep_string(string):
