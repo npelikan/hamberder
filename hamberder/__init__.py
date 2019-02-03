@@ -1,1 +1,1 @@
-from .TrumpStreamListener import trump_stream
+from .trump_stream import trump_stream

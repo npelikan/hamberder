@@ -44,9 +44,9 @@ def wall_replacements(token):
     elif token.lemma_ == "build":
         # handles tense
         if re.search(r"build", token.string, re.IGNORECASE):
-            replacement = "grill"
+            replacement = "grill" + token.whitespace_
         if re.search(r"built", token.string, re.IGNORECASE):
-            replacement = "grilled"
+            replacement = "grilled" + token.whitespace_
 
     else:
         return token.string

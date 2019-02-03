@@ -20,6 +20,16 @@ def test_replaces_stupid_catchphrase():
     assert "MORE HAMBERDERS, LESS MURDERS!" == replacement_rules(sent)
 
 
+def test_wall_replacement():
+    doc = nlp("Build the wall")
+    sent = list(doc.sents)[0]
+    assert "Grill the hamberders" == replacement_rules(sent)
+
+    doc = nlp("I love walls")
+    sent = list(doc.sents)[0]
+    assert "I love hamberders" == replacement_rules(sent)
+
+
 def test_replaces_noun_piles():
     sigh = nlp("JOBS, JOBS, JOBS!")
     sent = list(sigh.sents)[0]
