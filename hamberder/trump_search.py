@@ -32,7 +32,8 @@ class TrumpSearch:
         for status in new_posts:
             trumptweet = TrumpTweet(status)
             trumptweet.serve_hamberders()
-        self.maxtweetid = max(status.id for status in new_posts)
+        if len(new_posts) > 0:
+            self.maxtweetid = max(status.id for status in new_posts)
 
 
 def trump_search():
