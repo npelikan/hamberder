@@ -98,7 +98,13 @@ def replacement_rules(sentence):
     # nothing else worked, let's do some NLP replacements
     else:
         replaceable_tokens = [x for x in sentence if define_replaceable(x)]
-        to_replace = replaceable_tokens[0]
+
+        # if nothing is replaceable, just skip
+        # TODO: think of a funnier way to do this
+        try:
+            to_replace = replaceable_tokens[0]
+        except IndexError:
+            return sentence.text
 
         replacement = "hamberders" + to_replace.whitespace_
         if to_replace.is_upper:

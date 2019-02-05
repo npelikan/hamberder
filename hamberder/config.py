@@ -1,6 +1,7 @@
 import re
 
 TRUMP_TWITTER_ID = "25073877"
+ACCT_TWITTER_ID = "1092174040247107584"
 
 
 # defines hard non-replacement string rules

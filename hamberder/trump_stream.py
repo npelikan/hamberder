@@ -15,5 +15,5 @@ class TrumpStreamListener(tweepy.StreamListener):
 
 
 def trump_stream():
-    streamObj = tweepy.Stream(auth=api.auth, listener=TrumpStreamListener)
+    streamObj = tweepy.Stream(auth=api.auth, listener=TrumpStreamListener, tweet_mode='extended')
     streamObj.filter(follow=[TRUMP_TWITTER_ID])
