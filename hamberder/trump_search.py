@@ -30,6 +30,7 @@ class TrumpSearch:
             tweet_mode='extended',
             since_id=self.maxtweetid
         )
+        new_posts.reverse()
         for status in new_posts:
             trumptweet = TrumpTweet(status)
             trumptweet.serve_hamberders()
