@@ -11,6 +11,7 @@ class TrumpSearch:
     def __init__(self):
         # gets recent tweets
         all_recents = api.user_timeline(user_id=TRUMP_TWITTER_ID, tweet_mode='extended')
+        all_recents.reverse()
         # gets
         recent_posts = [remove_escapes(x.full_text) for x in api.user_timeline(user_id=ACCT_TWITTER_ID,
                                                                                tweet_mode='extended')]
