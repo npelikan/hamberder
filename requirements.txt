@@ -18,7 +18,7 @@ oauthlib==3.0.1
 plac==0.9.6
 pluggy==0.8.1
 preshed==2.0.1
-py==1.7.0
+py==1.10.0
 PySocks==1.6.8
 pytest==4.2.0
 pytest-cov==2.6.1
